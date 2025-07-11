@@ -1,0 +1,70 @@
+.bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: inherit;
+  color: inherit;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.bio-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 24px;
+  border: 4px solid #1abc9c;
+}
+
+.bio-text {
+  max-width: 800px;
+  background-color: inherit;
+  color: inherit;
+  padding: 20px;
+}
+
+.bio-text h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: inherit;
+  position: relative;
+}
+
+.bio-text h2::before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  width: 4px;
+  background-color: #1abc9c;
+}
+
+.bio-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: inherit;
+}
+
+.bio-text strong {
+  font-weight: bold;
+  color: inherit;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .bio {
+    flex-direction: row;
+    gap: 40px;
+    text-align: left;
+    justify-content: center;
+  }
+
+  .bio-text {
+    padding: 0;
+  }
+}

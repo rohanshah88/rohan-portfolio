@@ -1,0 +1,137 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto 40px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #1abc9c;
+  box-shadow: 0 0 4px rgba(26, 188, 156, 0.5);
+}
+
+.contact-form button {
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #16a085;
+}
+
+.success-message {
+  font-size: 18px;
+  color: #2ecc71;
+  margin: 30px auto 40px;
+  font-weight: 600;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.contact-link-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: #1e2022;
+}
+
+.contact-link-item a {
+  text-decoration: none;
+  color: #1abc9c;
+  font-weight: 500;
+}
+
+.contact-link-item a:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  color: #1abc9c;
+  font-size: 20px;
+}
+
+.contact-footer {
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  margin-top: 30px;
+}
+
+.footer-separator {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 60px auto 0;
+  width: 60%;
+}
+
+.dark-footer {
+  background-color: #1e2022;
+  color: #cccccc;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 0;
+}
+
+.contact-section {
+  padding: 60px 20px;
+  background-color: inherit;
+  text-align: center;
+}
+
+.contact-section h2,
+.contact-section p,
+.contact-link-item a {
+  color: inherit;
+}
+
+.dark-footer {
+  background-color: inherit;
+  color: inherit;
+}
+
+/* DEFAULT (Light Mode) */
+.contact-link-item a {
+  color: #1abc9c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link-item a:hover {
+  text-decoration: underline;
+  color: #169f86; /* slightly darker teal on hover */
+}
+
+/* DARK MODE OVERRIDE */
+body.dark .contact-link-item a {
+  color: #e0e0e0 !important;  /* soft white */
+}
+
+body.dark .contact-link-item a:hover {
+  color: #1abc9c !important;
+}

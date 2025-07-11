@@ -1,0 +1,68 @@
+.skills-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  color: #1e2022;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.skills-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.skill-category {
+  margin-bottom: 40px;
+}
+
+.skill-category h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #1abc9c;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skill-card.circular {
+  background-color: #f9f9f9;
+  color: #1e2022;
+  border-radius: 12px;
+  padding: 20px;
+  width: 150px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.circular-bar {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.skill-icon {
+  font-size: 20px;
+  margin: 6px 0;
+  color: #1abc9c;
+}
+
+.skill-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Dark Mode */
+body.dark .skills-section {
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+}
+
+/* Dark Mode Overrides — MOVE TO App.css instead */
+

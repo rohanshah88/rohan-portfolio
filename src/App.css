@@ -1,38 +1,241 @@
-.App {
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
   text-align: center;
+  padding: 40px 20px 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header h1 {
+  font-size: 48px;
+  margin: 0;
+  color: #1e90ff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tagline {
+  font-size: 18px;
+  color: #555;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+section {
+  background-color: #ffffff;
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+h2 {
+  font-size: 28px;
+  border-left: 5px solid #1e90ff;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 18px;
+}
+
+li::before {
+  content: "✔";
+  color: #1e90ff;
+  position: absolute;
+  left: 0;
+}
+
+a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #777;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+  color: #ffffff;
+}
+
+body.dark a {
+  color: #1abc9c;
+}
+
+body.dark .navbar {
+  background-color: #1e1e1e;
+}
+
+body.dark .project-card {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+body.dark .project-card:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+body.dark .contact-section {
+  background-color: #1c1c1c;
+}
+
+body.dark .dark-footer {
+  background-color: #000000;
+}
+
+
+/* Light mode (default) */
+body {
+  background-color: #ffffff;
+  color: #1e2022;
+}
+
+/* Dark mode */
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Apply to common text elements */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark span,
+body.dark li,
+body.dark a,
+body.dark strong,
+body.dark em {
+  color: inherit !important;
+}
+
+/* Navbar */
+body.dark .navbar {
+  background-color: #1e1e1e;
+}
+
+/* Hero Section */
+body.dark .hero {
+  background-color: #1c1c1c;
+}
+
+/* Bio Section */
+body.dark .bio-section {
+  background-color: #1c1c1c;
+}
+
+/* Skills Section */
+body.dark .skills-section {
+  background-color: #1c1c1c;
+}
+
+body.dark .skill-card {
+  background-color: #252525;
+  border: 1px solid #444;
+  color: #f0f0f0;
+}
+
+/* Projects Section */
+body.dark .projects {
+  background-color: #1c1c1c;
+}
+
+body.dark .project-card {
+  background-color: #252525;
+  color: #f0f0f0;
+}
+
+body.dark .project-card:hover {
+  background-color: #1abc9c;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Contact Section */
+body.dark .contact-section {
+  background-color: #1c1c1c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body.dark .dark-footer {
+  background-color: #000000;
+  color: #999;
+}
+
+body.dark .contact-link-item a {
+  color: #1abc9c;
+}
+
+body.dark .bio {
+  background-color: #1c1c1c;
+}
+
+body.dark .bio-text {
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+}
+
+body.dark .bio-text h2::before {
+  background-color: #1abc9c;
+}
+
+body.dark .bio-text strong {
+  color: #ffffff;
+}
+
+/* Dark Mode styles for Skills Section */
+body.dark .skills-section {
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+}
+
+body.dark .skill-card.circular {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+body.dark .skill-icon {
+  color: #1abc9c;
+}
+
+body.dark .skill-category h3 {
+  color: #1abc9c;
 }
