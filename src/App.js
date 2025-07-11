@@ -15,6 +15,7 @@ function App() {
   }, [darkMode]);
 
   return (
+    <main className="px-4 md:px-8 lg:px-20 max-w-screen-xl mx-auto space-y-20">
     <div className={`app ${darkMode ? 'dark' : ''}`}>
       <Navbar toggleDarkMode={() => setDarkMode(!darkMode)} darkMode={darkMode} />
       <Hero />
@@ -23,6 +24,7 @@ function App() {
       <section id="projects"><ProjectsGrid /></section>
       <section id="contact"><Contact /></section>
     </div>
+    </main>
   );
 }
 

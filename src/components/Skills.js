@@ -7,7 +7,6 @@ import 'react-tooltip/dist/react-tooltip.css';
 import {
   FaHtml5, FaCss3Alt, FaJs, FaReact,
   FaPhp, FaDatabase, FaGitAlt, FaGithub,
-  FaMobileAlt, FaBug
 } from 'react-icons/fa';
 
 const skillCategories = [
@@ -28,12 +27,10 @@ const skillCategories = [
     ],
   },
   {
-    title: 'Tools & Other',
+    title: 'Tools',
     skills: [
       { name: 'Git', icon: <FaGitAlt />, level: 80, tip: 'Version control system for tracking code changes.' },
       { name: 'GitHub', icon: <FaGithub />, level: 85, tip: 'Platform for hosting and collaborating on code.' },
-      { name: 'Responsive Design', icon: <FaMobileAlt />, level: 80, tip: 'Designing websites for all screen sizes.' },
-      { name: 'Debugging', icon: <FaBug />, level: 70, tip: 'Identifying and fixing code issues.' },
     ],
   },
 ];
@@ -51,8 +48,7 @@ export default function Skills() {
                 className="skill-card circular"
                 key={index}
                 data-tooltip-id="skill-tooltip"
-data-tooltip-content={skill.tip}
-
+                data-tooltip-content={skill.tip}
               >
                 <div className="circular-bar">
                   <CircularProgressbar

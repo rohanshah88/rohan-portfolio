@@ -1,70 +1,66 @@
 .bio {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  gap: 40px;
   padding: 60px 20px;
-  background-color: inherit;
-  color: inherit;
-  text-align: center;
-  transition: background-color 0.3s ease;
+  background-color: #fefefe;
+  text-align: left;
 }
 
 .bio-image img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
-  margin-bottom: 24px;
-  border: 4px solid #1abc9c;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.bio-image img:hover {
+  transform: scale(1.05);
 }
 
 .bio-text {
-  max-width: 800px;
-  background-color: inherit;
-  color: inherit;
-  padding: 20px;
+  max-width: 600px;
 }
 
 .bio-text h2 {
-  font-size: 28px;
+  font-size: 2.2rem;
   margin-bottom: 16px;
-  color: inherit;
-  position: relative;
-}
-
-.bio-text h2::before {
-  content: '';
-  position: absolute;
-  left: -16px;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 100%;
-  width: 4px;
-  background-color: #1abc9c;
+  color: #1e2022;
 }
 
 .bio-text p {
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
   margin-bottom: 12px;
-  color: inherit;
 }
 
-.bio-text strong {
-  font-weight: bold;
-  color: inherit;
-}
-
-/* Responsive */
-@media (min-width: 768px) {
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
   .bio {
-    flex-direction: row;
-    gap: 40px;
-    text-align: left;
-    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio-image img {
+    width: 200px;
+    height: 200px;
   }
 
   .bio-text {
-    padding: 0;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .bio-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .bio-text p {
+    font-size: 1rem;
   }
 }
